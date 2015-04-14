@@ -1,0 +1,63 @@
+
+
+//**********************//
+
+Git Commands
+
+git init
+// initialise git
+
+git add . 
+// Get repository ready
+
+git commit -m 'First Commit'
+
+//**********************//
+
+Ways to push the repository
+
+git remote add origin ("remote repository URL")
+// sets the new remote
+
+git remote -v
+// varifies the new remote
+
+git push origin master
+// Pushes the changes in your local repository up to the remote repository
+
+
+//**************************//
+
+npm install -g grunt-cli
+// install grunt globally 
+
+npm install <module> --save-dev
+// how to install dependencies
+
+npm install grunt-contrib-jshint --save-dev
+
+
+
+
+
+
+
+
+SASS
+
+/d 
+SASS watch
+
+C:\xampp\htdocs\sass-test>sass --watch sass\screen.scss:css\screen.css
+
+
+SASS Compress 
+File
+
+C:\xampp\htdocs\sass-test>sass -t compressed sass/screen.scss css/screen.css
+
+
+C:\xampp\htdocs\sass-test>sass -t compass sass\master.scss css\master.css
+
+
+cd /d X:\
