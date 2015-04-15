@@ -18,7 +18,7 @@ $font_prm_sd: 400;
 $white:#fff;
 $off_white :#f9f9f9;
 $ntl_xl :#ecedf0;
-$ntl_l 	:#a3acb2;
+$ntl_l 	:#ccc; /*#a3acb2;*/
 $ntl_m 	:#66757f;
 $ntl_d 	:#292f33; /* grey */
 $sec_l	:#e7ffe1;
@@ -30,7 +30,7 @@ $prm_m 	:#55acee;
 $prm_d	:#0084b4; *//* blue */
 /*====== Switched to neutral colours ========*/
 $prm_l 	:#a3acb2;
-$prm_m 	:#66757f;
+$prm_m 	:#00b3c8;/* #66757f;*/
 $prm_d	:#292f33; 
 $red_l	:#FFCDC9;
 $red_m	:#f15755;
@@ -153,4 +153,3 @@ a, visited a
 
 object, img {display:inline-block;vertical-align:middle}
 img.full {width:100%}
-

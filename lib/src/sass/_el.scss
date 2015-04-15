@@ -125,7 +125,7 @@ menu
 	 border-top-color:$ntl_m; 
 }
 
-.block_prm_l 
+.block-prm_l 
 {
 	display:block;
 	background:$prm_l;
@@ -134,13 +134,13 @@ menu
 	color:$prm_d
 }
 
-.block_sec_l a
+.block-sec_l a
 {
 	display:block;
 	text-align:center;
 	background:$sec_m;
 	padding:.5em;
-	@extend .txt-emboss_d;
+	@extend .txt-emboss-drk;
 	border-top:1px solid $sec_m;
 	border-bottom:1px solid $sec_m;
 	color:#fff
@@ -276,12 +276,16 @@ body
 	height: 100%;
 	text-rendering: optimizeLegibility;
 	min-height: 100%;
-	/* background-image: url(../img/bg.jpg);*/
 	background:#fff;
+	overflow:hidden;
+}
+
+body.bg-img
+{
+	background-image: url(../../assets/img/art/5.jpg);
 	background-size:cover;
 	background-repeat:no-repeat;
 	background-attachment:fixed;
-	overflow:hidden;
 }
 
 header 
@@ -616,7 +620,7 @@ ul#quickLinks li div[class^="icon-"], ul#quickLinks-temp li div[class^="icon-"]
 	animation: bounce 1200ms ease;
 }
 
-/* Bounce Key Frames */
+/* Bounce Key Frames 
 @-webkit-keyframes bounce
 {
   0% {
@@ -672,7 +676,7 @@ ul#quickLinks li div[class^="icon-"], ul#quickLinks-temp li div[class^="icon-"]
     transform:translateY(0%);
   }
 }
-
+*/
 /*=======================================*/
 
 @media only screen and (min-width : 20em) 
@@ -685,14 +689,11 @@ ul#quickLinks li div[class^="icon-"], ul#quickLinks-temp li div[class^="icon-"]
 		{ 
 			height:1.8em
 		};
-		/*
-		.cart 
-		{ 
-			display:block
-		};
-		[class^="icon-"] {font-size:1.8em};
-		.icon-unlocked {font-size:1.6em;padding-bottom:.2em}
-		*/
+	}
+
+	#login-container
+	{
+		width:100%;
 	}
 }
 
@@ -701,6 +702,10 @@ ul#quickLinks li div[class^="icon-"], ul#quickLinks-temp li div[class^="icon-"]
 	header 
 	{ 
 		font-size:1em
+	}
+	#login-container
+	{
+		width:20em;
 	}
 }
 

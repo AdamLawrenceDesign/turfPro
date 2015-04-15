@@ -86,35 +86,82 @@ img.border {border:1px solid $ntl_xl}
 	border-radius: 0 0 4px 4px;
 }
 
-.square {
-	-webkit-border-radius:0!important;
-	-moz-border-radius:0!important;
-	border-radius:0!important;
+.block-yellow {display:block;background:$yellow_l;border:1px solid $yellow_m;color:$yellow_d}		/* ========== blocks ========= */
+
+.block-prm 
+{
+	display:block;
+	background:$prm_m;
+	border:1px solid $prm_m;
+	color:$prm_d
 }
-.block_yellow {display:block;background:$yellow_l;border:1px solid $yellow_m;color:$yellow_d}		/* ========== blocks ========= */
 
-.block_prm {display:block;background:$prm_l;border:1px solid $prm_m;color:$prm_d}
-.block_red {display:block;background:$red_l;border:1px solid $red_m;color:$red_m;}
-.block_green {display:block;background:$sec_l;border:1px solid $sec_m;color:$sec_m;}
-.block_ntl {display:block;background:$ntl_xl;border:1px solid darken($ntl_xl,.2);color:$ntl_d}		/* @extend .txt_emboss */
-	.block_ntl h3, .block_ntl p {margin:.25em 0;line-height:1}
-	.block_ntl p {margin:.75em 0}
-	.block_ntl .inline_block {margin-top:.35em}
-	.block_ntl .button {padding:.5em .75em;text-shadow:0px 1px 1px rgba(0,0,0,.1)}
+.block-red {display:block;background:$red_l;border:1px solid $red_m;color:$red_m;}
+.block-green {display:block;background:$sec_l;border:1px solid $sec_m;color:$sec_m;}
+.block-ntl {display:block;background:$ntl_xl;border:1px solid darken($ntl_xl,.2);color:$ntl_d}		/* @extend .txt_emboss */
+.block-ntl h3, .block-ntl p {margin:.25em 0;line-height:1}
+.block-ntl p {margin:.75em 0}
+.block-ntl .inline_block {margin-top:.35em}
+.block-ntl .button {padding:.5em .75em;text-shadow:0px 1px 1px rgba(0,0,0,.1)}
 
-.block_sec {display:block;background:$sec_l;border:1px solid darken($sec_l, 5%);color:darken($ntl_d,30%)}
-.block_white {display:block;background:#fff}
+.block-sec {display:block;background:$sec_l;border:1px solid darken($sec_l, 5%);color:darken($ntl_d,30%)}
+.block-white {display:block;background:#fff}
 
 .border_ntl {border:1px solid darken($ntl_xl,10%)}
 
-.bg_sec {background:$sec_m}															/* ========= Backgrounds  ========= */
-.bg_prm_m {background:$prm_m}
-.bg_fa {background:#fafafa;@extend .txt-emboss;}
-.bg_fff {background:#fff}
-.bg_prm_d {background:$prm_d}
-.bg_ntl_l {background:$ntl_xl}
-.bg_ntl_m {background:$ntl_m}
-.bg_transparent {background:rgba(255,255,255,.75)}
+
+/* ========= Backgrounds  ========= */
+
+.bg-sec 
+{
+	background:$sec_m
+}															
+
+.bg-prm_m 
+{
+	background:$prm_m
+}
+
+.bg-fa 
+{
+	background:#fafafa;
+	@extend .txt-emboss;
+}
+
+.bg-fff 
+{
+	background:#fff
+}
+
+.bg-prm_d 
+{
+	background:$prm_d
+}
+
+.bg-ntl_l 
+{
+	background:$ntl_xl
+}
+
+.bg-ntl-m 
+{
+	background:$ntl_m;
+	color:#fff;
+	text-shadow:1px 1px 0 rgba(26,26,26,.7);
+}
+
+.bg-transparent 
+{
+	background:rgba(255,255,255,.75)
+}
+
+.bg-trans-drk 
+{
+	color:#fff;
+	background:rgba(26,26,26,.7);
+	@extend .txt-emboss-drk;
+}
+
 
 /* /* ========= gradient mixin  ========= *//* remove *//* Old browsers */ /* FF3.6+ *//* Chrome,Safari4+ *//* Chrome10+,Safari5.1+ *//* Opera 11.10+ */ /* W3C */ /*
 @mixin gradient($top, $bottom) {													 
@@ -174,18 +221,19 @@ img.border {border:1px solid $ntl_xl}
 	width:100%;
 	height:100%;
 	content:" ";
-	background:url(../img/bg_overlay.png);
+	background:url(../../img/bg_overlay.png);
 	background-size:14em;
 	opacity:.3;
 	pointer-events:none
 }
-
+/*
 .pattern_sports:before
 {
-	background: url("../img/sports/bg_overlay.png") repeat scroll 0 0 / 14em auto rgba(0, 0, 0, 0);
+	background: url("../../img/sports/bg_overlay.png") repeat scroll 0 0 / 14em auto rgba(0, 0, 0, 0);
 	position: absolute;
-	top: 0 }
-
+	top: 0
+}
+*/
 .border_ntl_xl_right
 {
 	border-right:1px solid $ntl_xl;

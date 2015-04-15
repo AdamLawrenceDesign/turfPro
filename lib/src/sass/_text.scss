@@ -73,15 +73,17 @@ blockquote p
 .txt_ntl_m {color:$ntl_m !important}
 .txt_fff {color:#fff !important}
 
-.txt_shadow_dk
+.txt-shadow-drk
 { 
 	text-shadow: 0px 1px 3px #000;
 }
-/* .txt_shadow_lt, .txt_shadow_lt h1, .txt_shadow_lt h2, .txt_shadow_lt p { text-shadow: 0px 1px 3px #fff} */
 
-.txt-emboss {																		/* ==== txt emboss ==== */
+.txt-emboss 
+{																	
     text-shadow:rgba(255,255,255,.5) 1px 1px 0;
 }
-.txt-emboss_d {
-    text-shadow:$ntl_m 1px 1px 0;
+
+.txt-emboss-drk {
+    /* text-shadow:$ntl_m 1px 1px 0; */
+    text-shadow: 1px 1px 0 #000;
 }
