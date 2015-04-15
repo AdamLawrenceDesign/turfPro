@@ -25,6 +25,13 @@ git remote -v
 git push origin master
 // Pushes the changes in your local repository up to the remote repository
 
+echo # _template >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/AdamLawrenceDesign/_template.git
+git push -u origin master
+
 
 //**************************//
 
@@ -36,6 +43,12 @@ npm install <module> --save-dev
 
 npm install grunt-contrib-jshint --save-dev
 
+
+//**************************//
+
+from command line
+
+npm init
 
 
 
