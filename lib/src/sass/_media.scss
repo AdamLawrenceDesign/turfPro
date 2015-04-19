@@ -75,6 +75,8 @@ section {																		/* ========= wrapper ========= */
 	position:relative;
 	margin: 0 auto;
 	text-align: left;
+	padding-left: 1em;
+	padding-right: 1em;
 }		
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {  body { font-size:1.16em } b{font-weight:500}  }    /* Chrome- and Safari-specific CSS here*/ /* Fix Font Size's Issues in Chrome */
@@ -100,7 +102,8 @@ section {																		/* ========= wrapper ========= */
 		section {																		/* ========= wrapper ========= */
 			width: auto;
 			margin: 0 auto;
-			padding: 0 .2em;
+			padding-left: 1em;
+			padding-right:1em;
 		}	
 			
 			#group_images {
@@ -306,7 +309,6 @@ section {																		/* ========= wrapper ========= */
 	nav {font-size:1em}
 	section { 																					/* Wrapper  */
 		width:67.75em!important;
-		padding: 0 
 	}
 	/*
 	#page {

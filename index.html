@@ -2,24 +2,54 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-    <title>Clone Repo | Adam Lawrence</title>
+    <title>Turf Pro | Adam Lawrence</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="shortcut icon" href="img/logo.png">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,500italic|Open+Sans:400,300,700,600,300italic' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
-
-    <link rel="stylesheet" href="lib/build/css/screen.css?v1.1" />
-	<script type="text/javascript" src="js/src/facebook-login.js"></script>
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>    
+    <link rel="stylesheet" href="lib/prod/screen.css?v1.1" />
+	<script type="text/javascript" src="lib/prod/project.min.js"></script>
     
 </head>
 
 <body>
 
-	<header></header>
+    <header class="ease_sd"><!--  style="background:rgba(0,0,0,.4)"-->
+        <img id="header_logo" class="fl_lt" src="assets/svg/logo.svg?v1.1" alt="" style="height:2em;margin:.5em" />
+        <ul class="inline tabs fl_rt txt_sm">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="products.html">PRODUCT INFORMATION</a></li>
+                <li>
+                    <a href="Weeds.hmtl">WEEDS</a>
+                    <ul id="menu-weeds" class="sub">
+                    </ul>
+                </li>
+                <li>
+                    <a href="pests.html">PESTS</a>
+                    <ul id="menu-pests" class="sub">
+                    </ul>
+                </li>
+                <li>
+                    <a href="diseases.html">DISEASES</a>
+                    <ul id="menu-diseases" class="sub">
+                    </ul>
+                </li>
+                <li>
+                    <a href="news.html" class="round">NEWS</a>
+                </li>
+        </ul>
+        <a class="menu_lg_toggle clearfix fl_rt" href="#" ><span class="icon-paragraph-right txt_lg"></span></a>
+        <div class="clearfix"></div>
+        <div class="underline-solid"></div>
+    </header>   
 
-	<main></main>
+	<main>
+        <section>
+        </section>
+    </main>
 
 	<footer></footer>
 
@@ -29,18 +59,7 @@
     	<a href="#"><span class="icon-arrow-up m_m"></span></a>
     </div>																	
 
-    <div id="additional_content" class="p_xl border_box align_ct">
-       
-       <section class="clearfix"><a href="#" class="collapse"><span class="icon-cross txt_lg txt_ntl_m fl_rt"></span></a></section>
-       	
-       <img class="absolute_vert_center opacity_0" src="svg/loading/loader_grey.gif" style="height:1.8em" alt="" />
-
-       <section id="additional_wrap" class="relative align_lt clearfix"></section>
-       
-       <section class="clearfix"><a href="#" class="collapse"><span class="icon-arrow-up txt_lg txt_ntl_m fl_rt"></span></a></section>
-    </div>													
-
-    <div id="menu_lg" class="p_l border_box">
+    <div id="menu_lg" class="p_l border_box hidden">
     	
         <section>
         
@@ -110,5 +129,11 @@
         <div id="testing_desktop_lg">
         </div>
 	</span>
+
+<script>
+
+var watchEvents = new EventManager('index.html');
+
+</script>
 
 </body>	
