@@ -127,6 +127,45 @@
               }
         });
 
+        //GET THE PRODUCTS THAT TREAT A SPECIFIC PROBLEM
+        var problemID = "wQektZL8RT",     //TEST FOR DOLLAR SPOT
+            subOptionClass = Parse.Object.extend("PinSubOptions"),
+            subOptionObject = new subOptionClass(),
+            productTreatsClass = Parse.Object.extend("ProductTreats"),
+            productTreatsQuery = new Parse.Query(productTreatsClass);
+
+        subOptionObject.id = problemID;
+        productTreatsQuery.include("subOptionObject");
+        productTreatsQuery.equalTo("TreatsSubOption", subOptionObject);
+        productTreatsQuery.find({
+            success: function(results) {
+                //alert("Product Treats Query worked!")
+                console.log("Product to Treat this problem are: ",results)
+            },
+              error: function(error) {
+                alert("Error: " + error.code + " " + error.message);
+              }
+        });
+
+        //GET PRODUCT INFORMATION FROM A SPECIFIC ID
+        var problemID = "ezttHMv8vV",     //TEST FOR 250GT
+            productClass = Parse.Object.extend("ProductDetails"),
+            productObject = new productClass(),
+            productQuery = new Parse.Query(productClass);
+
+        productObject.id = problemID;
+        productQuery.include("productObject");
+        productQuery.equalTo("objectId", problemID);
+        productQuery.find({//get("problemID",{//find({
+            success: function(results) {
+                //alert("Product Query worked!")
+                console.log("Product is: ",results)
+            },
+              error: function(error) {
+                alert("Error: " + error.code + " " + error.message);
+              }
+        });
+
 
 
 

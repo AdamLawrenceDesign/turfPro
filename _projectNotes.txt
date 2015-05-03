@@ -1,0 +1,32 @@
+/* 
+ Set up page 
+ all data to this page 
+
+ Whats needed 
+ 	Get Server Information
+ 		- Get Weeds info
+ 		- Get Pest Info
+ 		- Get Diseases
+ 		- Get Products
+
+	Load 
+
+ 	Content 
+ 		- Parse the URL
+ 		- Build Nav
+ 		- Build Aside
+		- Build Content 
+			- Create Secondary Links
+			- Create Secondary Content on Request
+
+ 	Manage Event
+ 		- Nav New Page 
+ 		- Change the content
+		- Second level content
+ 		
+ 	Build Content
+
+Each Page should be 
+
+new page-init ( page name, menuType, AsideMenu)
+

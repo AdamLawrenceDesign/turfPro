@@ -194,8 +194,7 @@ ul#listTextThemes
 }
 @media only screen and (min-width : 48em) {						/* ======= 48em (768px) Green ======= */
 }
-@media only screen and (min-width : 56.25em)
-{																/* ====== 56.25em (900px) dark blue ======= */
+@media only screen and (min-width : 56.25em){																/* ====== 56.25em (900px) dark blue ======= */
 
 }
 @media only screen and (min-width : 68.75em) {					/* ======== 68.75em (1100px) light blue ======== */
@@ -232,11 +231,14 @@ ul#listTextThemes
 	color:#fff;
 	background:#6caddf !important;
 }
+*/
 
-ul {																					
-	list-style:none;
-	padding:0
-}
+aside
+{
+	ul {																					
+		list-style:none;
+		padding:0
+	}
 	ul li {																					
 		padding:.5em
 	}
@@ -258,8 +260,8 @@ ul {
 		margin:0;
 		display:block;
 		width:100%;
-		border-bottom:1px solid $ntl_xl;
-		padding:1em;
+		/* border-bottom:1px solid $ntl_xl; */
+		padding:.25em .5em;
 		@extend .border_box;
 	}
 	
@@ -290,20 +292,23 @@ ul {
 			@extend .border_box;
 		}
 
-		.links li a.selected_right { border-right:5px solid $prm_m }																	
+		.links li a.selected_right { border-right:5px solid $sec_m }																	
 		.links li a.selected_left { border-left:5px solid $sec_m }
 		
-		.links_color li a:hover{
+		.links_color li a:hover
+		{
 			.rollover {
 				left:0;
 			}
 		}
 		
-		.links_line_right li a:hover{
+		.links_line_right li a:hover
+		{
 			@extend .ease_fast;
 			border-right:5px solid $prm_m
 		}
-		.links_line_left li a:hover{		
+		.links_line_left li a:hover
+		{		
 			@extend .ease_fast;
 			border-left:5px solid $sec_m
 		}
@@ -318,8 +323,8 @@ ul {
 			border-bottom:5px solid $prm_m;
 			padding-bottom:1px;
 		}
-
-
+};
+/*
 #image_list {padding:1em 2em 1em 0 }
 
 ul.justify {text-align:justify}																	

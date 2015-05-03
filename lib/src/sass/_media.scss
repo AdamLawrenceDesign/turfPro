@@ -71,7 +71,8 @@
 #testing_desktop {background:blue}
 #testing_desktop_lg {background:#39C}
 
-section {																		/* ========= wrapper ========= */
+section 
+{																		/* ========= wrapper ========= */
 	position:relative;
 	margin: 0 auto;
 	text-align: left;
@@ -79,7 +80,9 @@ section {																		/* ========= wrapper ========= */
 	padding-right: 1em;
 }		
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {  body { font-size:1.16em } b{font-weight:500}  }    /* Chrome- and Safari-specific CSS here*/ /* Fix Font Size's Issues in Chrome */
+@media screen and (-webkit-min-device-pixel-ratio:0) {  
+	body { font-size:1.16em } b{font-weight:500}  }    /* Chrome- and Safari-specific CSS here*/ /* Fix Font Size's Issues in Chrome */
+
 @media screen\0 { 										body { font-size:.92em } 	} 	 /* IE  - specific CSS here*/
 
 /* Break Points & Column Resizing */
@@ -96,6 +99,11 @@ section {																		/* ========= wrapper ========= */
 	h3 { font-size: 1.18em }
 	h4 { font-size: 1.08em }
 	
+	aside
+	{
+		display: none !important;
+	}
+
 	section, ._10_m, ._10_l, ._20_m, ._20_l, ._25_m, ._30_m, ._25_l, ._30_l, ._33_m, ._33_l, ._40_m,._40_l, ._50_m, ._50_l,._60_m, ._60_l,._66_m,._66_l,._70_m, ._70_l, ._75_m, ._75_l, ._80_m, ._80_l, ._90_m, ._90_l {
 		width:100%	}
 		
@@ -217,12 +225,25 @@ section {																		/* ========= wrapper ========= */
 			top:3.2em
 		}
 		/*ul.inline li a {padding-right:1.4em}*/
+
+	
+	aside
+	{
+		display: none!important;
+	}
+
 }
 
 @media only screen and (min-width : 56.25em) {					/* ====== 56.25em (900px) dark blue ======= */
 																#testing_tablet {		display:none	}
 																#testing_desktop {		display:block	}
 	#document {padding-top:1em}
+	
+	aside
+	{
+		display: block !important;
+	}
+
 	nav {font-size:.9em;display:block !important}	
 		.desktop_view {display:block}
 		.tablet_hide {display:block}
@@ -307,13 +328,11 @@ section {																		/* ========= wrapper ========= */
 																#testing_desktop {		display:none	}
 																#testing_desktop_lg {		display:block }
 	nav {font-size:1em}
-	section { 																					/* Wrapper  */
-		width:67.75em!important;
+	
+	section 
+	{ 																					/* Wrapper  */
+		width:58em !important;
 	}
-	/*
-	#page {
-		font-size:1em;
-		padding:1em 0 0 0;
-	}*/
+
 	
 }

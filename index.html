@@ -1,4 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
@@ -11,40 +12,48 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
     <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>    
     <link rel="stylesheet" href="lib/prod/screen.css?v1.1" />
-	<script type="text/javascript" src="lib/prod/project.min.js"></script>
+    <script type="text/javascript" src="lib/prod/project.min.js?v1.2"></script>
     
 </head>
 
 <body>
-
-    <header class="ease_sd"><!--  style="background:rgba(0,0,0,.4)"-->
-        <img id="header_logo" class="fl_lt" src="assets/svg/logo.svg?v1.1" alt="" style="height:2em;margin:.5em" />
-        <ul class="inline tabs fl_rt txt_sm">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="products.html">PRODUCT INFORMATION</a></li>
-                <li>
-                    <a href="Weeds.hmtl">WEEDS</a>
-                    <ul id="menu-weeds" class="sub">
-                    </ul>
-                </li>
-                <li>
-                    <a href="pests.html">PESTS</a>
-                    <ul id="menu-pests" class="sub">
-                    </ul>
-                </li>
-                <li>
-                    <a href="diseases.html">DISEASES</a>
-                    <ul id="menu-diseases" class="sub">
-                    </ul>
-                </li>
-                <li>
-                    <a href="news.html" class="round">NEWS</a>
-                </li>
+    
+    <div id="loader" class="fixed_max bg-fff middle linear" style="z-index:200">
+        <div clas="absolute_vert_center inline">
+            <img src="assets/img/loading.gif" alt="" />
+            <p class="txt_sm">Please Wait..</p>
+        </div>
+    </div>
+    
+    <header class="prm box-shadow ease_sd">
+        <img id="header_logo" class="fl_lt" src="assets/img/logo-green.png?v1.1" alt="" />
+        <ul class="inline tabs txt_sm clearfix">
+            <li class="std"><a href="index.html">HOME</a></li>
+            <li class="std"><a href="Products.html?itemName=space?secInfo=space">PRODUCT INFORMATION</a></li>
+            <li class="dropDown">
+                <a href="Weeds.hmtl">WEEDS</a>
+                <ul id="menu-weeds" class="sub" style="width:300%">
+                </ul>
+            </li>
+            <li class="dropDown">
+                <a href="pests.html">PESTS</a>
+                <ul id="menu-pests" class="sub" style="width:300%">
+                </ul>
+            </li>
+            <li class="dropDown">
+                <a href="diseases.html">DISEASES</a>
+                <ul id="menu-diseases" class="sub" style="width:300%;right:0;left:auto">
+                </ul>
+            </li>
+            <li class="std circle">
+                <a href="news.html" class="round">NEWS</a>
+            </li>
         </ul>
-        <a class="menu_lg_toggle clearfix fl_rt" href="#" ><span class="icon-paragraph-right txt_lg"></span></a>
+        <a id="hamburger" class="fl_rt" href="#">
+            <span class="icon-paragraph-left"></span>
+        </a>
         <div class="clearfix"></div>
-        <div class="underline-solid"></div>
-    </header>   
+    </header>                          
 
 	<main>
         <section>
@@ -53,14 +62,11 @@
 
 	<footer></footer>
 
-	<!-- Additional Controls -->
-
     <div id="to_top" class="hidden">
     	<a href="#"><span class="icon-arrow-up m_m"></span></a>
     </div>																	
 
     <div id="menu_lg" class="p_l border_box hidden">
-    	
         <section>
         
             <h2>MENU<a href="#"><span class="icon-cross txt_ntl_m menu_lg_toggle fl_rt"></span></a></h2>
@@ -115,24 +121,31 @@
             <div class="clearfix m_l_top m_l_bottom"></div>
         	    
             <a href="#" class="menu_lg_toggle m_l_top txt_lg"><span class="icon-arrow-up txt_ntl_m fl_rt"></span></a>
-        
         </section>
     </div>	
-    
+    <!--
     <span id="screenSizeTesting">
         <div id="testing_phone">
         </div>
         <div id="testing_tablet">
-        </div>
+        </div>$(function()
+{
+    // var weeds, pests, diseases, products;
+
+    Parse.initialize("7evCbPbxwHD1x53LoIAN3pyRx8wLIek4Gf7HSAxs", "H7LuMPGDwv9VPRm0jH7cIhfbgVWlDOofmbmwmEyn");
         <div id="testing_desktop">
         </div>
         <div id="testing_desktop_lg">
         </div>
 	</span>
-
+    -->
 <script>
-
-var watchEvents = new EventManager('index.html');
+    
+$(function()
+{
+    Parse.initialize("7evCbPbxwHD1x53LoIAN3pyRx8wLIek4Gf7HSAxs", "H7LuMPGDwv9VPRm0jH7cIhfbgVWlDOofmbmwmEyn");
+    var initProject = new ProjectHub('index', 'std', 'std');
+});
 
 </script>
 

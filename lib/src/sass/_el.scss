@@ -11,7 +11,7 @@ body
 	text-rendering: optimizeLegibility;
 	min-height: 100%;
 	background:#fafafa;
-	overflow:hidden;
+	overflow-y:scroll;
 }
 
 body.bg-img
@@ -53,11 +53,6 @@ nav
 	position:relative;
 	width: 100%;
 }
-/* ===================================== */
-/*
-.main_wrapper {
-	border:1px solid darken($ntl_xl,10%);
-}*/
 
 footer {																		/* ========= footer ========= */
   position:relative;
