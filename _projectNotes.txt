@@ -2,31 +2,21 @@
  Set up page 
  all data to this page 
 
- Whats needed 
- 	Get Server Information
- 		- Get Weeds info
- 		- Get Pest Info
- 		- Get Diseases
- 		- Get Products
+// TO DO 
+- Menu large 
+	- Load Content 
+	- Small 
+	- Extending Areas
 
-	Load 
+- Landing Page 
+	- Banner 
+	- Main Content 	
+		h1, h2, p blockquote p
+	- App Store Links
+	- Footer 
 
- 	Content 
- 		- Parse the URL
- 		- Build Nav
- 		- Build Aside
-		- Build Content 
-			- Create Secondary Links
-			- Create Secondary Content on Request
+- Products 
+	- Grid to first page
+	- 
 
- 	Manage Event
- 		- Nav New Page 
- 		- Change the content
-		- Second level content
- 		
- 	Build Content
-
-Each Page should be 
-
-new page-init ( page name, menuType, AsideMenu)
 

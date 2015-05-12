@@ -177,6 +177,26 @@ img.border {border:1px solid $ntl_xl}
 .underline-solid_gy {border-top:1px solid $ntl_m;width:100%;content:" "}			/* ========= underlines ========= */
 .underline_dotted {border-top:1px dotted $ntl_m;width:100%;content:" "}				
 
+.divider
+{
+	border-top:1px solid $ntl_m;
+	width:100%;
+	content:" ";
+	position: relative;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+	span 
+	{
+		color:$ntl_m;
+		background:#fafafa;
+		top:-.55em;
+		padding-left:.5em;
+		padding-right:.5em;
+		position:inherit;
+	}
+}
+
 /* ================ border-left and right on media page ===================== */
 
 .underline-arrow 

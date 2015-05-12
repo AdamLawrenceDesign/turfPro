@@ -94,11 +94,6 @@ section
 	.phone_max {width:100%;margin-top:.5em}
 	.desktop_view, .tablet_view { display:none}
 	
-	h1 { font-size:1.4em }
-	h2 { font-size: 1.2em}
-	h3 { font-size: 1.18em }
-	h4 { font-size: 1.08em }
-	
 	aside
 	{
 		display: none !important;
@@ -161,27 +156,7 @@ section
 	.desktop_view {display:none}
 	.phone_max {width:auto;margin-top:0}
 	
-	h1 {
-		font-size:2.2em;
-		margin-top:.2em;
-		line-height: 1.4 }
-		
-	h2 {
-		font-size: 1.68em;
-		line-height: 1.7em;
-		margin: 0 0 .2em 0 }
-	
-	h3 {
-		font-size: 1.38em;
-		line-height: 1.7em;
-		margin: .4em 0 .2em 0 }
-	
-	h4 {
-		font-size: 1.18em;
-		line-height: 1.2em;
-		margin:.5em 0 }
-		
-		#image_list {
+			#image_list {
 			padding:1em }
 			
 			.product_wrapper_25 {

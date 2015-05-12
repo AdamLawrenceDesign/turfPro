@@ -3,6 +3,7 @@
 <head>
 
     <title>Pests | Turf Pro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />        
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="shortcut icon" href="img/logo.png">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,500italic|Open+Sans:400,300,700,600,300italic' rel='stylesheet' type='text/css'>
@@ -17,67 +18,96 @@
 
 <body>
 
-    <div id="loader" class="fixed_max bg-fff middle linear" style="z-index:200">
-        <div clas="absolute_vert_center inline">
-            <img src="assets/img/loading.gif" alt="" />
-            <p class="txt_sm">Please Wait..</p>
-        </div>
-    </div>    
-    
-    <header class="prm box-shadow ease_sd">
-        <img id="header_logo" class="fl_lt" src="assets/img/logo-green.png?v1.1" alt="" />
-        <ul class="inline tabs txt_sm clearfix">
-            <li class="std"><a href="index.html">HOME</a></li>
-            <li class="std"><a href="Products.html?itemName=space?secInfo=space">PRODUCT INFORMATION</a></li>
-            <li class="dropDown">
-                <a href="#">WEEDS</a>
-                <ul id="menu-weeds" class="sub" style="width:300%">
-                </ul>
-            </li>
-            <li class="dropDown">
-                <a href="#">PESTS</a>
-                <ul id="menu-pests" class="sub" style="width:300%">
-                </ul>
-            </li>
-            <li class="dropDown">
-                <a href="#">DISEASES</a>
-                <ul id="menu-diseases" class="sub" style="width:300%;right:0;left:auto">
-                </ul>
-            </li>
-            <li class="std circle">
-                <a href="news.html" class="round">NEWS</a>
-            </li>
-        </ul>
-        <a id="hamburger" class="fl_rt" href="#">
-            <span class="icon-paragraph-left"></span>
-        </a>
-        <div class="clearfix"></div>
-    </header>                          
-
-    <section>
-
-        <aside class="_33_m bg-fff p_l_top">
-            <h4 style="padding-left:.5rem">Pests</h4>
-            <ul id="sideNav" class="links">
-            </ul>
-        </aside>
-
-        <main id="description" class="_66_m p_l_top">
-            <h1></h1>
-            <h2></h2>
-            <img class="_100" src="" alt="" />
-            <p><b>Description:</b></p>
-            <p id="description"></p>
+    <div id="loader">
+        <div id="loader-item" clas="inline">
+            <img src="assets/img/loader_grey.gif" class="m_l" alt="" />
             <div class="clearfix"></div>
-            <p><b>Registered Controls:</b></p>
-            <ul id="controls" class="clearfix">
-            </ul>
-            <p><b>References</b></p>
-            <p id="references"></p>
-        </main>
-    </section>    
+            <span class="txt_sm m_l_top">PLEASE WAIT..</span>
+        </div>
+    </div>
 
-	<footer></footer>
+    <header id="header-standard" class="box-shadow ease_sd">
+        <div id="header-bg"></div>
+        <div id="header-info-large">
+            <img class="logo" src="assets/svg/logo_4side-shadow.svg?v1.1" alt="" />
+            <ul id="menu-main" class="inline tabs txt_sm clearfix">
+                <li class="std"><a href="index.html">HOME</a></li>
+                <li class="std"><a href="Products.html?itemName=space?secInfo=space">PRODUCT INFORMATION</a></li>
+                <li class="dropDown">
+                    <a href="#">WEEDS</a>
+                    <ul id="menu-weeds" class="sub" style="width:300%">
+                    </ul>
+                </li>
+                <li class="dropDown">
+                    <a href="#">PESTS</a>
+                    <ul id="menu-pests" class="sub" style="width:300%">
+                    </ul>
+                </li>
+                <li class="dropDown">
+                    <a href="#">DISEASES</a>
+                    <ul id="menu-diseases" class="sub" style="width:300%;right:0;left:auto">
+                    </ul>
+                </li>
+                <li class="std circle">
+                    <a href="news.html" class="round">NEWS</a>
+                </li>
+            </ul>
+        </div>
+        <div id="header-info-small">
+            <a id="hamburger" href="#">
+                MENU<span class="m_l_left icon-paragraph-left"></span>
+            </a>
+            <div class="clearfix"></div>
+            <img class="logo" src="assets/svg/logo_4side-shadow.svg?v1.1" alt="" />
+        </div>
+        <div class="clearfix"></div>
+    </header>                           
+
+    <main id="main-standard">
+        <section>
+
+            <aside class="_33_m bg-fff p_l_top">
+                <h4 style="padding-left:.5rem">Pests</h4>
+                <ul id="sideNav" class="links">
+                </ul>
+            </aside>
+
+            <main id="description" class="_66_m p_l_top">
+                <h1></h1>
+                <h2></h2>
+                <img class="_100" src="" alt="" />
+                <p><b>Description:</b></p>
+                <p id="description"></p>
+                <div class="clearfix"></div>
+                <p><b>Registered Controls:</b></p>
+                <ul id="controls" class="clearfix">
+                </ul>
+                <p><b>References</b></p>
+                <p id="references"></p>
+            </main>
+        </section>    
+    </main>     
+
+    <div class="clearfix"></div>
+
+    <div class="custom-section clearfix">
+        <h3>Available On iPhone</h3>
+        <h4>Download the app </h4>
+        <p>A snappy peice of text that sums up what this web page is about, try and fit in as many key words as possible at it help with gaining a decent search result in google searches</p>
+        <blockquote><p>This is an opportunities for peice of snappy text that will catch the eye of the casual reader</p></blockquote>
+    </div>    
+
+    <footer>
+        <section class="p_l_top p_m">
+            <img class="logo fl_lt m_m_right" src="assets/svg/logo_5side-shadow2.svg?v1.1" alt="" /><p>A snappy peice of text that sums up what this web page is about, try and fit in as many key words as possible at it help with gaining a decent search result in google searches</p>
+            <div class="clearfix"></div>
+            <div class="underline_dotted m_l_top m_l_bottom"></div>
+            <p>Turf Pro Available now at the app store</p>
+            <p>© Turf Pro 2014</p>
+            <div class="clearfix"></div>
+        </section>     
+        <div class="clearfix"></div>  
+    </footer>    
 
 	<!-- Additional Controls -->
 
@@ -156,10 +186,26 @@
         </div>
 	</span>
     -->
+    
 <script>
+    var diseases = [], diseasesData = [],
+        pest = [], pestsData = [],
+        weeds = [], weedsData = [],
+        products = [], productsData = [],
+        itemName, secondaryInfo;
+</script>
 
+<script>
 $(function()
 {
+    var path, title, info;
+
+    path = window.location.href;
+    itemName = path.slice(path.search('itemName='), path.search('secInfo=')).replace(/%20/g, ' ').replace('itemName=','').replace('?','');
+    secondaryInfo = path.slice(path.search('secInfo='), window.location.href.length).replace(/%20/g, ' ').replace('secInfo=','').replace('#','').replace('?','');
+
+    console.log('title: ', itemName, ', info: ', secondaryInfo);
+
     Parse.initialize("7evCbPbxwHD1x53LoIAN3pyRx8wLIek4Gf7HSAxs", "H7LuMPGDwv9VPRm0jH7cIhfbgVWlDOofmbmwmEyn");
     var initProject = new ProjectHub('pests', 'std', 'std');
 });
