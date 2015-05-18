@@ -4,13 +4,17 @@ header
 	color:#fff;
 	width:100%;
 	z-index:110;
-	padding:1em;
+	padding:0;
 	position: relative;
 	@extend .border_box;																		
 	text-align:center;
 	width:100%;
 	z-index:110;
-	padding:.5em;
+
+	#menu-wrap
+	{
+		padding:.5em;
+	}
 
 	/* CONTAINS THE LARGE AND SMALL MENUS */
 
@@ -315,7 +319,10 @@ header
 	header  
 	{
 		font-size:1.2em;
-		padding: 1em;
+		#menu-wrap
+		{
+			padding: 1em;
+		};
 		#header-info-large
 		{
 			#header-logo
