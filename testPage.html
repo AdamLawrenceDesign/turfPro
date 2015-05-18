@@ -178,7 +178,28 @@
         productTreatsQuery.find({
             success: function(results) {
                 //alert("Product Query worked!")
-                console.log("This Product treats: ",results)
+                //console.log("This Product treats: ")
+                for (i = 0; i < results.length; i++) {
+                    var productTreatsObject = Parse.Object.extend("ProductTreats");
+                    productTreatsObject = results[i];
+                    //console.log("SubOptionID is " + i + " is: " + productTreatsObject.get("TreatsSubOption").id);
+                    var defectID = productTreatsObject.get("TreatsSubOption").id,
+                        defectClass = Parse.Object.extend("PinSubOptions"),
+                        defectQuery = new Parse.Query(defectClass);
+
+                    defectQuery.equalTo("objectId", defectID);
+                    defectQuery.find({
+                        success: function(results2) {
+                            //console.log("results2 are ",results2);
+                            var defectObject = Parse.Object.extend("PinSubOptions");
+                            defectObject = results2[0];
+                            console.log("This product treats defect which is of type: " + defectObject.get("PinOptionString"));
+                        },
+                        error: function(error2) {
+                                alert("Error: " + error.code + " " + error.message);
+                        }
+                    });
+                }
             },
               error: function(error) {
                 alert("Error: " + error.code + " " + error.message);

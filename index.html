@@ -24,8 +24,6 @@
     <link rel="stylesheet" href="lib/prod/screen.css?v1.1" />
     <script type="text/javascript" src="lib/prod/project.min.js?v1.2"></script>
 
-    
-
 </head>
 
 <body>
@@ -61,7 +59,6 @@
                         <a href="#">WEEDS</a>
 
                         <ul id="menu-weeds" class="sub" style="width:300%">
-
                         </ul>
 
                     </li>
@@ -335,7 +332,6 @@ $(function()
     var getData = new QueryParse('index', function()
     {
         $('#loader').hide();
-        console.log(weedsData);
         var makeWeedsMenu = new BuildNav('menu-weeds', weedsData, 'menu', false);
         var makePestsMenu = new BuildNav('menu-pests', pestsData, 'menu', false);
         var makeDiseaseMenu = new BuildNav('menu-diseases', diseasesData, 'menu', false);
