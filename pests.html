@@ -390,13 +390,35 @@ $(function()
 
     path = window.location.href;
     itemName = path.slice(path.search('itemName='), path.search('secInfo=')).replace(/%20/g, ' ').replace('itemName=','').replace('?','');
-    secondaryInfo = path.slice(path.search('secInfo='), window.location.href.length).replace(/%20/g, ' ').replace('secInfo=','').replace('#','').replace('?','');
-
-    console.log('title: ', itemName, ', info: ', secondaryInfo);
+    problemId = path.slice(path.search('secInfo='), window.location.href.length).replace(/%20/g, ' ').replace('secInfo=','').replace('#','').replace('?','');
 
     Parse.initialize("7evCbPbxwHD1x53LoIAN3pyRx8wLIek4Gf7HSAxs", "H7LuMPGDwv9VPRm0jH7cIhfbgVWlDOofmbmwmEyn");
     
-    var initProject = new ProjectHub('pests', 'std', 'std');
+    var getData = new QueryParse('pests', function()
+    {
+        // SORT OBJECT IN ALPHABETICAL ORDER
+        function compare(a,b)
+        {
+            if(a.name < b.name)
+                return -1;
+            if(a.name > b.name)
+                return 1;
+            return;     
+        }
+
+        productsData.sort(compare);
+        diseasesData.sort(compare);
+        pestsData.sort(compare);
+        weedsData.sort(compare);
+
+        $('#loader').hide();
+        var makeWeedsMenu = new BuildNav('menu-weeds', weedsData, 'menu', false);
+        var makePestsMenu = new BuildNav('menu-pests', pestsData, 'menu', false);
+        var makeDiseaseMenu = new BuildNav('menu-diseases', diseasesData, 'menu', false);
+
+        var buildPage = new ProblemsPage('pests');
+        var eventManager = new EventManager('pests');
+    });
 
 });
 

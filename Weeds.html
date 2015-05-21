@@ -391,9 +391,23 @@ $(function()
 
     Parse.initialize("7evCbPbxwHD1x53LoIAN3pyRx8wLIek4Gf7HSAxs", "H7LuMPGDwv9VPRm0jH7cIhfbgVWlDOofmbmwmEyn");
     
-    // var initProject = new ProjectHub('products', 'std', 'std');
     var getData = new QueryParse('weeds', function()
     {
+        // SORT OBJECT IN ALPHABETICAL ORDER
+        function compare(a,b)
+        {
+            if(a.name < b.name)
+                return -1;
+            if(a.name > b.name)
+                return 1;
+            return;     
+        }
+
+        productsData.sort(compare);
+        diseasesData.sort(compare);
+        pestsData.sort(compare);
+        weedsData.sort(compare);
+                
         $('#loader').hide();
         var makeWeedsMenu = new BuildNav('menu-weeds', weedsData, 'menu', false);
         var makePestsMenu = new BuildNav('menu-pests', pestsData, 'menu', false);

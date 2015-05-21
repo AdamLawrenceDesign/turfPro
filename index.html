@@ -23,7 +23,6 @@
 <body>
 
     <div id="loader">
-
         <div id="loader-item" clas="inline">
 
             <img src="assets/img/loader_grey.gif" class="m_l" alt="" />
@@ -53,7 +52,7 @@
                         <a href="#">WEEDS</a>
 
                         <ul id="menu-weeds" class="sub" style="width:300%">
-                        </ul>
+                        </ul>                        
 
                     </li>
 
@@ -325,7 +324,23 @@ $(function()
     // var initProject = new ProjectHub('index', 'std', 'std');
     var getData = new QueryParse('index', function()
     {
+        // SORT OBJECT IN ALPHABETICAL ORDER
+        function compare(a,b)
+        {
+            if(a.name < b.name)
+                return -1;
+            if(a.name > b.name)
+                return 1;
+            return;     
+        }
+
+        productsData.sort(compare);
+        diseasesData.sort(compare);
+        pestsData.sort(compare);
+        weedsData.sort(compare);
+
         $('#loader').hide();
+        var orderVarialbes = new SortObject()
         var makeWeedsMenu = new BuildNav('menu-weeds', weedsData, 'menu', false);
         var makePestsMenu = new BuildNav('menu-pests', pestsData, 'menu', false);
         var makeDiseaseMenu = new BuildNav('menu-diseases', diseasesData, 'menu', false);

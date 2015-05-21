@@ -103,10 +103,15 @@ header
 				margin-right: 0;
 			}
 		}
-
+		
 		li:first-child
 		{
-			margin-left: -1em;
+			margin-left: 0em;
+		}
+		
+		li
+		{
+			margin-left: 0em;
 		}
 
 		li.circle a
@@ -149,7 +154,7 @@ header
 			}
 			li a
 			{
-				padding:.5em 1em;
+				padding:.75em 1em;
 				text-align: left;
 				width: 100%;
 				-webkit-border-radius: 0;
@@ -157,6 +162,8 @@ header
 				border-radius: 0;
 				@extend .clearfix;
 				color:#fff;	
+				font-size: .8em;
+				padding-left: .75rem;
 			}
 		}
 

@@ -1172,7 +1172,9 @@ header {
         color: #fff;
         margin-right: 0; }
     header ul.tabs li:first-child {
-      margin-left: -1em; }
+      margin-left: 0em; }
+    header ul.tabs li {
+      margin-left: 0em; }
     header ul.tabs li.circle a {
       border: 1px #fff solid;
       -webkit-border-radius: 3em;
@@ -1201,13 +1203,15 @@ header {
       header ul.tabs li ul.sub li:first-child {
         margin-left: 0; }
       header ul.tabs li ul.sub li a {
-        padding: .5em 1em;
+        padding: .75em 1em;
         text-align: left;
         width: 100%;
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
         border-radius: 0;
-        color: #fff; }
+        color: #fff;
+        font-size: .8em;
+        padding-left: .75rem; }
     header ul.tabs li:hover a {
       background: #171717;
       color: #fafafa;

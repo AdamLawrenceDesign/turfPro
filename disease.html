@@ -397,6 +397,21 @@ $(function()
     // var initProject = new ProjectHub('products', 'std', 'std');
     var getData = new QueryParse('diseases', function()
     {
+        // SORT OBJECT IN ALPHABETICAL ORDER
+        function compare(a,b)
+        {
+            if(a.name < b.name)
+                return -1;
+            if(a.name > b.name)
+                return 1;
+            return;     
+        }
+
+        productsData.sort(compare);
+        diseasesData.sort(compare);
+        pestsData.sort(compare);
+        weedsData.sort(compare);
+
         $('#loader').hide();
         var makeWeedsMenu = new BuildNav('menu-weeds', weedsData, 'menu', false);
         var makePestsMenu = new BuildNav('menu-pests', pestsData, 'menu', false);
