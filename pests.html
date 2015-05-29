@@ -141,7 +141,6 @@
                 <h4 style="padding-left:.5rem">Pests</h4>
 
                 <ul id="sideNav" class="links">
-
                 </ul>
 
             </aside>
@@ -154,7 +153,7 @@
 
                 <h2></h2>
 
-                <img class="_100" src="" alt="" />
+                <img class="_50_s fl_rt border_ntl m_m_left" src="" alt="" />
 
                 <p><b>Description:</b></p>
 
@@ -412,7 +411,13 @@ $(function()
         weedsData.sort(compare);
 
         $('#loader').hide();
-        var makeWeedsMenu = new BuildNav('menu-weeds', weedsData, 'menu', false);
+        
+        var makeWeedsMenu = new BuildNav('menu-weeds', weedsData, 'menu', function()
+            {
+                $('#menu-weeds').css({'height':'500px','overflow':'scroll','top':'0'}); // 
+                $('#menu-weeds').slimScroll({height: '500px', margin: '0px', width : '300%', 'border-radius': '8px'});
+                $('.slimScrollBar').css({'z-index': '1000', 'background': '#dedede'});
+            });
         var makePestsMenu = new BuildNav('menu-pests', pestsData, 'menu', false);
         var makeDiseaseMenu = new BuildNav('menu-diseases', diseasesData, 'menu', false);
 

@@ -50,7 +50,7 @@
 
         </div>
 
-    </div>
+    </div> 
 
 
     <header id="header-standard" class="box-shadow ease_sd">
@@ -412,8 +412,28 @@ $(function()
     // var initProject = new ProjectHub('products', 'std', 'std');
     var getData = new QueryParse('products', function()
     {
+        // SORT OBJECT IN ALPHABETICAL ORDER
+        function compare(a,b)
+        {
+            if(a.name < b.name)
+                return -1;
+            if(a.name > b.name)
+                return 1;
+            return;     
+        }
+
+        productsData.sort(compare);
+        diseasesData.sort(compare);
+        pestsData.sort(compare);
+        weedsData.sort(compare);
+
         $('#loader').hide();
-        var makeWeedsMenu = new BuildNav('menu-weeds', weedsData, 'menu', false);
+        var makeWeedsMenu = new BuildNav('menu-weeds', weedsData, 'menu', function()
+            {
+                $('#menu-weeds').css({'height':'500px','overflow':'scroll','top':'0'}); // 
+                $('#menu-weeds').slimScroll({height: '500px', margin: '0px', width : '300%', 'border-radius': '8px'});
+                $('.slimScrollBar').css({'z-index': '1000', 'background': '#dedede'});
+            });
         var makePestsMenu = new BuildNav('menu-pests', pestsData, 'menu', false);
         var makeDiseaseMenu = new BuildNav('menu-diseases', diseasesData, 'menu', false);
         var buildPage = new ProductsPage(catergory, productId);

@@ -1112,6 +1112,8 @@ header {
   width: 100%;
   z-index: 110;
   /* CONTAINS THE LARGE AND SMALL MENUS */ }
+  header .slimScrollDiv {
+    display: none !important; }
   header #menu-wrap {
     padding: .5em; }
   header #header-info-small .logo {
@@ -1221,6 +1223,8 @@ header {
         margin-right: 0; }
     header ul.tabs li:hover a:after {
       opacity: 1; }
+    header ul.tabs li:hover .slimScrollDiv {
+      display: block !important; }
     header ul.tabs li:hover ul {
       /* display:block; */
       visibility: visible;
@@ -1478,6 +1482,9 @@ header {
 
 #testing_desktop_lg {
   background: #39C; }
+
+#screenSizeTesting {
+  display: none; }
 
 section {
   /* ========= wrapper ========= */

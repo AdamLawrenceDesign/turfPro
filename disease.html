@@ -127,55 +127,48 @@
         </div>    
 
         <div class="clearfix"></div>
-
     </header>                             
 
-    
-
     <main id="main-standard">
-
         <section>
-
             <aside class="_33_m p_l_top">
-
                 <h4 style="padding-left:.5rem">Diseases</h4>
 
                 <ul id="sideNav" class="links">
 
                 </ul>
-
             </aside>
 
-            
-
             <div id="description" class="_66_m p_l_top">
-
-                <img class="_25_s fl_rt border_ntl m_m_left" src="" alt="" />
-
+                <img class="_50_s fl_rt border_ntl m_m_left" src="" alt="" />
                 <h1></h1>
-
                 <h2></h2>
-
-
-
                 <p id="description" class="txt_sm"></p>
-
                 <div class="clearfix"></div>
 
                 <div class="underline-solid"></div>
-
+                <!--
                 <p class="txt_sm"><b>Registered Controls: </b><span id="regControls" class="productLinks"></span></p>
-
-                <ul id="controls" class="clearfix">
-
+                -->
+                <p class="txt_sm"><b>Registered Controls: </b></p>
+                
+                <ul id="regControls-1" class="_33_m clearfix productLinks" >               
+                </ul>
+                <ul id="regControls-2" class="_33_m clearfix productLinks" >               
+                </ul>
+                <ul id="regControls-3" class="_33_m clearfix productLinks" >               
                 </ul>
 
+                <div class="clearfix"></div>
+
+                <!--
+                <ul id="controls" class="clearfix">
+                </ul>
+                -->
                 <div class="underline-solid"></div>
 
                 <p id="references" class="txt_sm"></p>
-
             </div>    
-
         </section>    
 
     </div>
@@ -413,8 +406,12 @@ $(function()
         weedsData.sort(compare);
 
         $('#loader').hide();
-        var makeWeedsMenu = new BuildNav('menu-weeds', weedsData, 'menu', false);
-        var makePestsMenu = new BuildNav('menu-pests', pestsData, 'menu', false);
+        var makeWeedsMenu = new BuildNav('menu-weeds', weedsData, 'menu', function()
+            {
+                $('#menu-weeds').css({'height':'500px','overflow':'scroll','top':'0'}); // 
+                $('#menu-weeds').slimScroll({height: '500px', margin: '0px', width : '300%', 'border-radius': '8px'});
+                $('.slimScrollBar').css({'z-index': '1000', 'background': '#dedede'});
+            });        var makePestsMenu = new BuildNav('menu-pests', pestsData, 'menu', false);
         var makeDiseaseMenu = new BuildNav('menu-diseases', diseasesData, 'menu', false);
 
         var buildPage = new ProblemsPage('diseases');

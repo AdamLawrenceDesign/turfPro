@@ -11,6 +11,11 @@ header
 	width:100%;
 	z-index:110;
 
+	.slimScrollDiv
+	{
+		display:none !important;
+	}
+
 	#menu-wrap
 	{
 		padding:.5em;
@@ -184,13 +189,19 @@ header
 			{
 				opacity: 1;
 			}
+
+			.slimScrollDiv
+			{
+				display:block !important;
+			}
+
+
 			ul
 			{
 				/* display:block; */
 				visibility:visible;
 				opacity:1;
 				transition-delay:200s;
-
 				li 
 				{
 					/* display: block !important; */
